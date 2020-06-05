@@ -1,0 +1,210 @@
+%%%% Proceedings format for most of ACM conferences (with the exceptions listed below) and all ICPS volumes.
+%\documentclass[sigconf]{acmart}
+\documentclass[sigchi]{acmart} %pedro changed for camera ready
+
+%%%% As of March 2017, [siggraph] is no longer used. Please use sigconf (above) for SIGGRAPH conferences.
+
+%%%% Proceedings format for SIGPLAN conferences 
+% \documentclass[sigplan, anonymous, review]{acmart}
+
+%%%% Proceedings format for SIGCHI conferences
+% \documentclass[sigchi, review]{acmart}
+
+%%%% To use the SIGCHI extended abstract template, please visit
+% https://www.overleaf.com/read/zzzfqvkmrfzn
+
+
+\usepackage{booktabs} % For formal tables
+
+% custom packages
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[colorinlistoftodos,backgroundcolor=white,prependcaption,textsize=tiny,linecolor=black]{todonotes}
+
+\makeatletter
+\providecommand\@dotsep{5}
+\def\listtodoname{List of Todos}
+\def\listoftodos{\@starttoc{tdo}\listtodoname}
+\makeatother
+
+\usepackage{xcolor}
+
+\newcommand\missing[1]{\textcolor{red}{<#1>}}
+\newcommand\missingRef{\textcolor{red}{[REF]}}
+
+
+% Copyright
+% \setcopyright{none}
+%\setcopyright{acmcopyright} %pedro changed for camera ready
+\setcopyright{acmlicensed}
+%\setcopyright{rightsretained} %was bfore
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+% DOI
+%\acmDOI{10.475/123_4}
+
+% ISBN
+%\acmISBN{123-4567-24-567/08/06}
+
+%Conference
+%\acmConference[]{}{}{
+% }
+%\acmYear{}
+%\copyrightyear{}
+%\acmArticle{}
+%\acmPrice{}
+
+
+\begin{document}
+\raggedbottom
+\title[Detecting Visuo-Haptic Mismatches in VR using ERPs]{Detecting Visuo-Haptic Mismatches in Virtual Reality using the Prediction Error Negativity of Event-Related Brain Potentials}
+
+%\titlenote{Produces the permission block, and
+%  copyright information}
+%\subtitle{Prediction Mismatches In Haptic VR (Comparing Different Sensory Stimulation Channels)}
+%\subtitlenote{The full version of the author's guide is available as \texttt{acmart.pdf} document}
+
+\author{Lukas Gehrke}
+%\authornote{These authors contributed equally to this research.}
+\email{lukas.gehrke@tu-berlin.de}
+\orcid{10000-0003-3661-1973}
+\affiliation{%
+  \institution{Technical University of Berlin}
+  \city{Berlin}
+  \country{Germany}
+}
+
+\author{Sezen Akman}
+%\authornotemark[1]
+\email{sezen.akman@campus.tu-berlin.de}
+\affiliation{%
+  \institution{Technical University of Berlin}
+  \city{Berlin}
+  \country{Germany}
+}
+
+\author{Pedro Lopes}
+%\authornotemark[1]
+\authornote{Author affiliated also with Hasso Plattner Institute, Germany.}
+\email{pedrolopes@cs.uchicago.edu}
+\orcid{0000-0001-6527-7084}
+\affiliation{%
+  \institution{University of Chicago}
+  \city{Chicago}
+  \state{Illinois}
+  \country{USA}
+}
+
+\author{Albert Chen}
+\email{albertc1@uchicago.edu}
+\affiliation{%
+  \institution{University of Chicago}
+  \city{Chicago}
+  \state{Illinois}
+  \country{USA}
+}
+
+\author{Avinash Kumar Singh}
+\email{avinash.singh@uts.edu.au}
+\affiliation{%
+  \institution{National Chiao Tung University}
+  \city{Hsinchu}
+  \country{Taiwan}
+}
+
+\author{Hsiang-Ting Chen}
+\email{Tim.Chen@uts.edu.au}
+\affiliation{%
+  \institution{University of Technology Sydney}
+  \city{Sidney}
+  \country{Australia}
+}
+
+\author{Chin Teng Lin}
+\email{Chin-Teng.Lin@uts.edu.au}
+\affiliation{%
+  \institution{University of Technology Sydney}
+  \city{Sidney}
+  \country{Australia}
+}
+
+\author{Klaus Gramann}
+\authornote{Author affiliated also with University of California, San Diego.}
+\email{klaus.gramann@tu-berlin.de}
+\affiliation{%
+  \institution{Technical University of Berlin}
+  \city{Berlin}
+  \country{Germany}
+}
+
+
+% The default list of authors is too long for headers.
+\renewcommand{\shortauthors}{Gerke, Akman, Lopes et al.}
+
+
+\begin{abstract}
+% 150 words
+Designing immersion is the key challenge in virtual reality; this challenge has driven advancements in displays, rendering and recently, haptics. To increase our sense of physical immersion, for instance, vibrotactile gloves render the sense of touching, while electrical muscle stimulation (EMS) renders forces. Unfortunately, the established metric to assess the effectiveness of haptic devices relies on the user's subjective interpretation of unspecific, yet standardized, questions.
+
+Here, we explore a new approach to detect a conflict in visuo-haptic integration (e.g., inadequate haptic feedback based on poorly configured collision detection) using electroencephalography (EEG). We propose analyzing event-related potentials (ERPs) during interaction with virtual objects. In our study, participants touched virtual objects in three conditions and received either no haptic feedback, vibration, or vibration and EMS feedback. To provoke a brain response in unrealistic VR interaction, we also presented the feedback prematurely in 25\% of the trials.
+
+We found that the early negativity component of the ERP (so called prediction error) was more pronounced in the mismatch trials, indicating we successfully detected haptic conflicts using our technique. Our results are a first step towards using ERPs to automatically detect visuo-haptic mismatches in VR, such as those that can cause a loss of the user's immersion.
+\end{abstract}
+
+%
+% The code below should be generated by the tool at
+% http://dl.acm.org/ccs.cfm
+%
+
+\copyrightyear{2019}
+\acmYear{2019}
+\setcopyright{acmlicensed}
+\acmConference[CHI 2019]{CHI Conference on Human Factors in Computing Systems Proceedings}{May 4--9, 2019}{Glasgow, Scotland Uk}
+\acmBooktitle{CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2019), May 4--9, 2019, Glasgow, Scotland Uk}
+\acmPrice{15.00}
+\acmDOI{10.1145/3290605.3300657}
+\acmISBN{978-1-4503-5970-2/19/05}
+
+\fancyhead{}
+\settopmatter{printacmref=true}
+
+ \begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10003120.10003121.10003125.10011752</concept_id>
+<concept_desc>Human-centered computing~Haptic devices</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10003120.10003121.10003124.10010866</concept_id>
+<concept_desc>Human-centered computing~Virtual reality</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Human-centered computing~Haptic devices}
+\ccsdesc[300]{Human-centered computing~Virtual reality}
+
+\keywords{force feedback; EEG; elecrical muscle stimulation; virtual reality; ERP; prediction error}
+
+\maketitle
+
+\input{1.introduction}
+\input{2.towardsERPs}
+\input{3.related-work}
+\input{4.experiment}
+\input{5.implications}
+\input{6.conclusions}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{bibliography}
+
+%\newpage
+%\todototoc
+%\listoftodos
+
+\end{document}

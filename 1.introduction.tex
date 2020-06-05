@@ -1,0 +1,18 @@
+\section{Intro}
+
+A key challenge in virtual reality is to create a user experience that mimics the natural experience as closely as possible. This challenge has propelled advancements in display software and hardware (VR headsets and rendering), interaction techniques and, more recently, in haptic technology. In fact, many researchers argue that attaining haptic realism is the next grand challenge in virtual reality~\cite{brooks_whats_1999, yokokohji_what_1996}.
+
+The addition of haptic feedback in VR has been shown to dramatically increase the user's sense of immersion~\cite{ramsamy_using_2006}. For instance, vibrotactile gloves~\cite{Kim_2016} stimulate the user's sense of touch, and force feedback and exoskeletons~\cite{borst_evaluation_2005,gu_dexmo:_2016} or electrical muscle stimulation~\cite{lopes_walls_2017,lopes_impacto:_2015} stimulate the user's proprioceptive system. 
+
+To better understand how different interaction technologies support real world-like user experiences, questionnaires are used that ask "how realistic is it? (from 1-7)"~\cite{ipq_paper,slater_representations_1993,witmer_measuring_1998}. These questionnaires are also used as a metric to assess how effective a haptic device is in rendering a realistic simulation (e.g.,~\cite{cane_CHI_2018,alqassab_impact_2016,reckter_tech-note_2009} just to mention a few). However, as Slater pointed out in his critique, these metrics are \textit{subjective}~\cite{slater_measuring_1999}, i.e., they rely on the user's own introspection and frame of reference. Furthermore, these metrics require breaking the user's immersion---literally, as they require the user to halt the immersive experience---to collect the data about the previous interaction.
+
+Instead, in this paper, we propose analyzing the user's brain responses as a first step towards automatically detecting visuo-haptic mismatches, such as those that can cause loss of immersion. In the future, such a technique can be seen as a complimentary or even alternative metric of visuo-haptic immersion that, unlike questionnaires, does not require any task interruption or subjective reflection. Our approach, depicted in~\ref{main_fig_diff_erp}, works by analyzing the user's brain dynamics captured by an EEG worn under the VR headset. We found that we can use the user's brain potentials to detect sensory mismatches that occur in moments where the VR experience is not immersive (e.g., due to a poorly configured collision detection, inadequate or delayed haptic information, etc.).
+
+\begin{figure}[htp!]
+\includegraphics[width=\linewidth]{images/Fig1_pedro_5.png}
+%\vspace{-17pt}
+\caption{We propose using the prediction error negativity of the brain's event related potential (ERP) to detect visuo-haptic conflicts arising from unrealistic VR feedback. In our study, participants selected objects in VR. To provoke their brains to process an unrealistic interaction, we sometimes provided the haptic feedback prematurely. When subtracting these ERPs to the ERPs from realistic interactions, we found that the negative amplitude of the error prediction increased, hinting at a loss in immersion.}
+\label{main_fig_diff_erp}
+%\vspace{-8pt}
+\end{figure}
+

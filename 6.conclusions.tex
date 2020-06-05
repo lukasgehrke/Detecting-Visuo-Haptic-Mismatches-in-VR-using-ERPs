@@ -1,0 +1,13 @@
+\section{Conclusions}
+
+In this paper, we propose a technique that allows us to detect haptic conflicts in VR, which is based on event-related brain potentials obtained using EEG during interaction with virtual objects. We found out in our user study that the early negativity component of the ERP (the prediction error) is more pronounced during situations with haptic conflicts, such as: inadequate or delayed haptic feedback, poorly configured collision detection, etc. This result suggests we can successfully detect haptic conflicts using our proposed technique. In fact, we found out that, when the number of mismatched feedback channels increases, the prediction error increases.
+
+Thus, we believe this is a first step to establish the potential of ERPs as an indicator for visuo-haptic mismatches in VR. We discussed the impact of our findings for VR research and lay out two potential avenues to this future metric: a complement to the traditional presence questionnaires or an alternative metric that does not require interrupting the user.
+
+As for future work, we plan two courses of action, a technical and an experimental angle. First, we plan to explore a real-time implementation of our analysis scripts, which would enable real-time adaptation of the haptic devices based on the user's ERPs (e.g., inspired by recent work in EEG-based adaptive VR~\cite{zander_evaluation_2017}); to achieve this we will explore implementing our scripts into a real-time EEG-based cloud service, such as intheon\footnote{\url{https://intheon.io}, last accessed 17/09/2018}. Secondly, while we believe our work is a first step, more research is required to solidify ERPs as a metric for haptic immersion; for instance, one needs to explore how sensitive the prediction error is to different sensory channels beyond vibration and EMS. 
+
+Lastly, our work might fuel a new investigation into the uncanny valley of haptics~\cite{Berger2018}. Specifically, one might investigate at what perceptual threshold does haptic feedback negatively impact the accuracy of user's predictions of a virtual environment? 
+
+\begin{acks}
+We kindly thank our colleague Jas Brooks at the University of Chicago for helping us proofread this work.
+\end{acks}
